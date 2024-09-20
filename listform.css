@@ -1,0 +1,106 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #444;
+  }
+  .back{
+    font-size: 35px;
+  }
+  .back a{
+    text-decoration: none;
+    color: #fff;
+  }
+  /* Form container styles */
+  .house-listing-form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form header styles */
+  .form-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .form-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .form-header p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form fields styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Submit button styles */
+  .submit-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #444;
+  }
+  
+  /* Success message styles */
+  .success-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #34C759;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .circle i {
+    font-size: 24px;
+    line-height: 50px;
+  }
+  
+  .success-message p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }

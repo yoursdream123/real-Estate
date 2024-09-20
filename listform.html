@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="listform.css">
+</head>
+<body>
+  <div class="back"><a href="index.html"><ion-icon name="arrow-back-outline"></ion-icon></a></div>
+    <!-- The form container -->
+<div class="house-listing-form">
+    <!-- The form header with animation -->
+    <div class="form-header">
+      <h1>Sell Your House</h1>
+      <p>Fill out the form below to list your house</p>
+    </div>
+  
+    <!-- The form fields -->
+    <form id="house-listing-form">
+      <div class="form-group">
+        <label for="house-type">House Type</label>
+        <select id="house-type" name="house-type">
+          <option value="">Select an option</option>
+          <option value="apartment">Apartment</option>
+          <option value="house">House</option>
+          <option value="condo">Condo</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Enter your house address">
+      </div>
+  
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Enter your city">
+      </div>
+  
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" placeholder="Enter your state">
+      </div>
+  
+      <div class="form-group">
+        <label for="zip">Zip Code</label>
+        <input type="text" id="zip" name="zip" placeholder="Enter your zip code">
+      </div>
+  
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" placeholder="Enter your house price">
+      </div>
+
+      <div class="form-group">
+        <label for="pictures">Upload pictures</label>
+        <input type="file"><input type="file"><input type="file">
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" placeholder="Enter a brief description of your house"></textarea>
+      </div>
+  
+      <!-- The submit button with animation -->
+      <button class="submit-btn">List Your House</button>
+    </form>
+  
+    <!-- The success message container -->
+    <div class="success-message">
+      <div class="circle">
+        <i class="fas fa-check" style="color: #34C759;"></i>
+      </div>
+      <p style="color: #34C759;">Your home successfully listed</p>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Select the form elements
+const form = document.getElementById('house-listing-form');
+const submitBtn = document.querySelector('.submit-btn');
+const successMessage = document.querySelector('.success-message');
+
+// Form validation
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // Validate form fields
+  const houseType = document.getElementById('house-type').value;
+  const address = document.getElementById('address').value;
+  const city = document.getElementById('city').value;
+  const state = document.getElementById('state').value;
+  const zip = document.getElementById('zip').value;
+  const price = document.getElementById('price').value;
+  const description = document.getElementById('description').value;
+
+  if (!houseType || !address || !city || !state || !zip || !price || !description) {
+    alert('Please fill out all fields');
+    return;
+  }
+
+  // Clear the form fields
+  form.reset();
+
+  // Show the success message
+  successMessage.style.display = 'block';
+
+  // Add animation to the success message
+  successMessage.classList.add('animate');
+
+  // Hide the form
+  form.style.display = 'none';
+});
+
+// Animate the submit button on hover
+submitBtn.addEventListener('mouseover', () => {
+  submitBtn.style.animation = 'pulse 1s ease-in-out infinite';
+});
+
+submitBtn.addEventListener('mouseout', () => {
+  submitBtn.style.animation = 'none';
+});
+  </script>
+</body>
+</html>
